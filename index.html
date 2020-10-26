@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="a-fullscreen">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+  <title>Globo AR - Sadia</title>
+
+  <link rel="stylesheet" href="style/style.css">
+  <meta aframe-injected="" name="mobile-web-app-capable" content="yes" />
+  <meta aframe-injected="" name="theme-color" content="black" />
+</head>
+
+<body>
+  <a-scene embedded arjs="trackingMethod: best;">
+    <a-assets>
+      <img id="descubra-novos-preparos" src="./img/descubra-novos-preparos.png">
+      <img id="aprenda-receitas-de-peru" src="./img/aprenda-receitas-de-peru.png">
+      <img id="de-onde-vem" src="./img/de-onde-vem.png">
+      <img id="prepare-receitas-sobrecoxa" src="./img/prepare-receitas-sobrecoxa.png">
+      <img id="descubra-menu-para-semana" src="./img/descubra-menu-para-semana.png">
+      <img id="lek-sadia" src="./img/lek-sadia.png">
+      <img id="texto-quanto-mais" src="./img/texto-quanto-mais.png">
+      <img id="myCustomImage" src="./img/preload.jpg">
+    </a-assets>
+
+    <a-camera raycaster="objects: .cantap" cursor="fuse: false; rayOrigin: mouse;" wasd-controls-enabled="true"
+      camera="" position="" rotation="" look-controls="" wasd-controls="">
+    </a-camera>
+
+    <a-entity visible="false" id="screen">
+      <a-image id="index1" class="cantap" position="0.5 2 -1" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+        opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material="" geometry="">
+      </a-image>
+
+      <a-image id="index2" class="cantap" position="0.5 1 -1" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+        opacity="1" src="#aprenda-receitas-de-peru" roughness="1" visible="true" material="" geometry="">
+      </a-image>
+
+      <a-image id="index3" class="cantap" position="0.5 -0 -1" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+        opacity="1" src="#de-onde-vem" roughness="1" visible="true" material="" geometry="">
+      </a-image>
+
+      <a-image id="index4" class="cantap" position="0.5 -1 -1" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+        opacity="1" src="#prepare-receitas-sobrecoxa" roughness="1" visible="true" material="" geometry="">
+      </a-image>
+
+      <a-image id="index5" class="cantap" position="0.5 -2 -1" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+        opacity="1" src="#descubra-menu-para-semana" roughness="1" visible="true" material="" geometry="">
+      </a-image>
+
+      <a-image id="lek-sadia-index" class="cantap" position="-1.1 -0.8 -1.3" rotation="0 0 0" scale="1 1 1" width="2.5"
+        height="3.8" opacity="1" src="#lek-sadia" roughness="1" visible="true" material="" geometry="">
+      </a-image>
+
+      <a-image id="index6" class="cantap" position="-1 1.9 -1" rotation="0 0 0" scale="1 1 1" width="1.5" height="1.5"
+        opacity="1" src="#texto-quanto-mais" roughness="1" visible="true" material="" geometry="">
+      </a-image>
+    </a-entity>
+
+    <a-light type="ambient" intensity="1" light=""></a-light>
+
+    <a-entity class="cantap" geometry="primitive: box"
+      material="color: #ffffff; transparent: true; opacity: 0.0" scale="1000 1000 0" position="0 0 -10">
+    </a-entity>
+    <canvas class="a-canvas a-grab-cursor a-mouse-cursor-hover" data-aframe-canvas="true" width="1454" height="980">
+    </canvas>
+  </a-scene>
+
+  <script src="./js/aframe.min.js"></script>
+  <script src="./js/aframe-ar.js"></script>
+</body>
+
+</html>

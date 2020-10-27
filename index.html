@@ -38,7 +38,7 @@
         </a-assets>
 
         <a-entity visible="false" id="objects" smooth="true" smoothCount="10" smoothTolerance=".1" smoothThreshold="5"
-            look-at="[gps-camera]" raycaster="objects: .clickable" cursor="fuse: false; rayOrigin: mouse;">
+            raycaster="objects: .clickable" cursor="fuse: true; rayOrigin: mouse;">
             <a-entity visible="false" id="screen" smooth="true" smoothCount="10" smoothTolerance=".1"
                 smoothThreshold="5">
                 <a-image id="index1" class="clickable" position="0.5 2 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
@@ -78,7 +78,7 @@
         </a-entity>
 
         <a-entity camera gps-camera rotation-reader wasd-controls-enabled="false" position="" rotation=""
-            look-controls="" raycaster="objects: .clickable" cursor="fuse: false; rayOrigin: mouse;">
+            look-controls="" raycaster="objects: .clickable" cursor="fuse: true; rayOrigin: mouse;">
         </a-entity>
 
         <canvas class="a-canvas a-grab-cursor a-mouse-cursor-hover" data-aframe-canvas="true" width="1204"

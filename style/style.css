@@ -2,3 +2,27 @@ body {
     margin: 0px;
     overflow: hidden;
 }
+
+.fixed-front {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+.centered-text {
+    position: absolute;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: white;
+    top: 40vh;
+    width: 100vw;
+    text-align: center;
+    z-index: 1;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+}

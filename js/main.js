@@ -13,12 +13,13 @@ function showPosition(position) {
     objects.setAttribute("visible", "true");
 }
 
-let clickTimeout = -1;
+let isOpening = false;
 function open(url) {
-    clearTimeout(clickTimeout);
-    clickTimeout = setTimeout(() => {
+    isOpening = true;
+    if (!isOpening) {
         window.open(url);
-    }, 200);
+        setTimeout(() => isOpening = false, 100);
+    }
 }
 
 AFRAME.registerComponent('ar-scene', {

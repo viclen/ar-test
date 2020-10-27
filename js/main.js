@@ -15,11 +15,12 @@ function showPosition(position) {
 
 let isOpening = false;
 function openurl(url) {
-    window.open(url);
-
-    console.log(url);
-
-    return isOpening;
+    if (!isOpening) {
+        window.open(url);
+        console.log(url);
+        isOpening = true;
+        setTimeout(() => isOpening = false, 500);
+    }
 }
 
 AFRAME.registerComponent('ar-link', {

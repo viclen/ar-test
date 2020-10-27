@@ -43,7 +43,7 @@ AFRAME.registerComponent('ar-scene', {
 
             screen.setAttribute('position', '0 0 0');
             screen.setAttribute('visible', 'true');
-            screen.setAttribute('scale', '1 1 1');
+            screen.setAttribute('scale', '0.1 0.1 0.1');
 
             getLocation(showPosition)
 

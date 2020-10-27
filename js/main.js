@@ -15,8 +15,8 @@ function showPosition(position) {
 
 let isOpening = false;
 function open(url) {
-    isOpening = true;
     if (!isOpening) {
+        isOpening = true;
         window.open(url);
         setTimeout(() => isOpening = false, 100);
     }
@@ -31,7 +31,7 @@ AFRAME.registerComponent('ar-scene', {
 
             screen.setAttribute('position', '0 0 -1');
             screen.setAttribute('visible', 'true');
-            screen.setAttribute('scale', '0.5 0.5 0.5');
+            screen.setAttribute('scale', '0.1 0.1 0.1');
 
             getLocation(showPosition)
 

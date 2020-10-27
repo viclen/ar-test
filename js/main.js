@@ -29,7 +29,7 @@ AFRAME.registerComponent('ar-link', {
             event.preventDefault();
             console.log('click', this.el.id);
             if (event.target.id === this.el.id)
-                openurl(this.getAttribute('href'));
+                openurl(this.el.getAttribute('href'));
         });
     }
 });

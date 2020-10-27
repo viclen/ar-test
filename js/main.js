@@ -26,6 +26,17 @@ function openurl(url) {
     return isOpening;
 }
 
+AFRAME.registerComponent('log-hover', {
+    init: function () {
+        this.el.addEventListener('mouseenter', function () {
+            console.log('mouseenter', this.el.id);
+        });
+        this.el.addEventListener('mouseleave', function () {
+            console.log('mouseleave', this.el.id);
+        });
+    }
+});
+
 AFRAME.registerComponent('ar-scene', {
     init: function () {
         const clickToStart = document.getElementById('clickToStart');
@@ -67,4 +78,4 @@ AFRAME.registerComponent('ar-scene', {
             openurl("https://www.sadia.com.br/");
         })
     }
-})
+});

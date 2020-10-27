@@ -24,7 +24,7 @@
         <div class="centered-text">Clique para iniciar</div>
     </div>
 
-    <a-scene ar-scene vr-mode-ui="enabled: false" embedded
+    <a-scene ar-scene vr-mode-ui="enabled: true" embedded
         arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;" renderer="antialias: true;">
         <a-assets>
             <img id="descubra-novos-preparos" src="./img/descubra-novos-preparos.png">
@@ -37,9 +37,9 @@
             <img id="myCustomImage" src="./img/preload.jpg">
         </a-assets>
 
-        <a-entity visible="false" id="objects" smooth="true" smoothCount="10" smoothTolerance=".1" smoothThreshold="5"
-            raycaster="objects: .clickable" cursor="fuse: true; rayOrigin: mouse;">
-            <a-entity visible="false" id="screen">
+        <a-entity log-hover visible="false" id="objects" smooth="true" smoothCount="10" smoothTolerance=".1" smoothThreshold="5"
+            raycaster="objects: .clickable" cursor="fuse: true; rayOrigin: mouse;" emitevents="true">
+            <a-entity log-hover visible="false" id="screen">
                 <a-image id="index1" class="clickable" position="0.5 2 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
                     height="0.9" opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material=""
                     geometry="">

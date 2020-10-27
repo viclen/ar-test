@@ -14,10 +14,51 @@
 
   <script src="./js/aframe.min.js"></script>
   <script src="./js/aframe-ar.js"></script>
+
+  <script>
+    AFRAME.registerComponent("gallery", {
+      schema: {},
+      init: function () {
+        var image1 = document.querySelector("#index1");
+        image1.addEventListener("click", function (e) {
+          alert("CLICKOU");
+          window.open("https://www.google.com.br");
+        });
+        var image2 = document.querySelector("#index2");
+        image2.addEventListener("click", function (e) {
+          alert("CLICKOU");
+          window.open("https://www.google.com.br");
+        });
+        var image3 = document.querySelector("#index3");
+        image3.addEventListener("click", function (e) {
+          alert("CLICKOU");
+          window.open("https://www.google.com.br");
+        });
+        var image4 = document.querySelector("#index4");
+        image4.addEventListener("click", function (e) {
+          alert("CLICKOU");
+          window.open("https://www.google.com.br");
+        });
+        var image5 = document.querySelector("#index5");
+        image5.addEventListener("click", function (e) {
+          alert("CLICKOU");
+          window.open("https://www.google.com.br");
+        });
+      },
+    });
+  </script>
 </head>
 
 <body>
-  <a-scene embedded arjs="trackingMethod: best;">
+  <a-scene gallery vr-mode-ui="enabled: false;" embedded
+    arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;" renderer="antialias: true;
+      logarithmicDepthBuffer: auto;
+      colorManagement: true;
+      sortObjects: false;
+      physicallyCorrectLights: true;
+      precision: low;
+      maxCanvasWidth: 1024;
+      maxCanvasHeight: 1024;">
     <a-assets>
       <img id="descubra-novos-preparos" src="./img/descubra-novos-preparos.png">
       <img id="aprenda-receitas-de-peru" src="./img/aprenda-receitas-de-peru.png">
@@ -29,8 +70,9 @@
       <img id="myCustomImage" src="./img/preload.jpg">
     </a-assets>
 
-    <a-marker-camera preset='custom' type='pattern' url='aframe/pattern-frame.patt'>
-      <a-entity visible="true">
+    <!-- <a-marker-camera preset="custom" type="pattern" url="aframe/pattern-frame.patt"> -->
+    <a-marker-camera preset="hiro" emitevents="true">
+      <a-entity physics-image-target="name: 03" id="palm" rotation="-90 360 0">
         <a-image id="index1" class="cantap" position="0.5 2 -1" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
           opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material="" geometry="">
         </a-image>
@@ -60,6 +102,8 @@
         </a-image>
       </a-entity>
     </a-marker-camera>
+    
+    <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1920" height="969"></canvas>
 
     <a-light type="ambient" intensity="1" light=""></a-light>
   </a-scene>

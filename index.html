@@ -33,47 +33,48 @@
             <img id="myCustomImage" src="./img/preload.jpg">
         </a-assets>
 
-        <a-entity visible="false" id="objects" look-at="[gps-camera]" smooth="true" smoothCount="10"
-            smoothTolerance=".01" smoothThreshold="5" cursor="fuse: false; rayOrigin: mouse;">
+        <a-entity visible="false" id="objects" look-at="[gps-camera]" smooth="count: 10; threshold: 5;"
+            raycaster="objects: .clickable" cursor="fuse: false; rayOrigin: mouse;">
             <a-entity visible="false" id="screen">
-                <a-image id="index1" class="cantap" position="0.5 2 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
+                <a-image id="index1" class="clickable" position="0.5 2 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
                     height="0.9" opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material=""
                     geometry="">
                 </a-image>
 
-                <a-image id="index2" class="cantap" position="0.5 1 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
+                <a-image id="index2" class="clickable" position="0.5 1 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
                     height="0.9" opacity="1" src="#aprenda-receitas-de-peru" roughness="1" visible="true" material=""
                     geometry="">
                 </a-image>
 
-                <a-image id="index3" class="cantap" position="0.5 -0 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
+                <a-image id="index3" class="clickable" position="0.5 -0 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
                     height="0.9" opacity="1" src="#de-onde-vem" roughness="1" visible="true" material="" geometry="">
                 </a-image>
 
-                <a-image id="index4" class="cantap" position="0.5 -1 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
+                <a-image id="index4" class="clickable" position="0.5 -1 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
                     height="0.9" opacity="1" src="#prepare-receitas-sobrecoxa" roughness="1" visible="true" material=""
                     geometry="">
                 </a-image>
 
-                <a-image id="index5" class="cantap" position="0.5 -2 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
+                <a-image id="index5" class="clickable" position="0.5 -2 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
                     height="0.9" opacity="1" src="#descubra-menu-para-semana" roughness="1" visible="true" material=""
                     geometry="">
                 </a-image>
 
-                <a-image id="logo-sadia-index" class="cantap" position="-1.1 -0.8 -1.3" rotation="0 0 0" scale="1 1 1"
-                    width="2.5" height="3.8" opacity="1" src="#logo-sadia" roughness="1" visible="true" material=""
-                    geometry="">
+                <a-image id="logo-sadia-index" class="clickable" position="-1.1 -0.8 -1.3" rotation="0 0 0"
+                    scale="1 1 1" width="2.5" height="3.8" opacity="1" src="#logo-sadia" roughness="1" visible="true"
+                    material="" geometry="">
                 </a-image>
 
-                <a-image id="index6" class="cantap" position="-1 1.9 -1" rotation="0 0 0" scale="1 1 1" width="1.5"
+                <a-image id="index6" class="clickable" position="-1 1.9 -1" rotation="0 0 0" scale="1 1 1" width="1.5"
                     height="1.5" opacity="1" src="#texto-quanto-mais" roughness="1" visible="true" material=""
                     geometry="">
                 </a-image>
             </a-entity>
         </a-entity>
 
-        <a-entity camera gps-camera rotation-reader raycaster="objects: .cantap" cursor="fuse: true; rayOrigin: mouse;"
-            wasd-controls-enabled="false" look-controls="reverseMouseDrag: true; reverseTouchDrag: true;">
+        <a-entity camera gps-camera rotation-reader raycaster="objects: .clickable"
+            cursor="fuse: true; rayOrigin: mouse;" wasd-controls-enabled="false"
+            look-controls="reverseMouseDrag: true; reverseTouchDrag: true;">
         </a-entity>
 
         <canvas class="a-canvas a-grab-cursor a-mouse-cursor-hover" data-aframe-canvas="true" width="1204"

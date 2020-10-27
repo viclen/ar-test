@@ -18,7 +18,7 @@ function openurl(url) {
     if (!isOpening) {
         window.open(url);
         isOpening = true;
-        setTimeout(() => isOpening = false, 100);
+        setTimeout(() => isOpening = false, 200);
     }
 
     console.log(url);

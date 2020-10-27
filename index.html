@@ -35,9 +35,9 @@
                 clickToStart.addEventListener('click', () => {
                     const screen = document.getElementById('screen');
 
-                    screen.setAttribute('position', '0.2 1.6 -2.7');
+                    screen.setAttribute('position', '0 0 -6');
                     screen.setAttribute('visible', 'true');
-                    screen.setAttribute('scale', '0.8 0.8 0.8');
+                    screen.setAttribute('scale', '1 1 1');
 
                     getLocation(showPosition)
 
@@ -92,8 +92,8 @@
         </a-assets>
 
         <a-entity visible="false" id="objects" look-at="[gps-camera]" smooth="true" smoothCount="10"
-            smoothTolerance=".01" smoothThreshold="5">
-            <a-entity visible="false" id="screen" position="0 0 0" scale="0.3 0.3 0.3">
+            smoothTolerance=".01" smoothThreshold="5" cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity visible="false" id="screen">
                 <a-image id="index1" class="cantap" position="0.5 2 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
                     height="0.9" opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material=""
                     geometry="">
@@ -131,8 +131,7 @@
         </a-entity>
 
         <a-entity camera gps-camera rotation-reader raycaster="objects: .cantap" cursor="fuse: false; rayOrigin: mouse;"
-            wasd-controls-enabled="false" position="" rotation="" look-controls="" look-controls-enabled="false"
-            wasd-controls="">
+            wasd-controls-enabled="false" look-controls="enabled: false">
         </a-entity>
 
         <canvas class="a-canvas a-grab-cursor a-mouse-cursor-hover" data-aframe-canvas="true" width="1204"

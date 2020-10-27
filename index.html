@@ -35,7 +35,7 @@
       <img id="myCustomImage" src="./img/preload.jpg">
     </a-assets>
 
-    <a-marker preset="hiro" smooth="count: 10; threshhold: 3;">
+    <a-marker preset="hiro" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5">
       <a-entity visible="false" id="screen" rotation="-90 360 0">
         <a-image id="index1" class="cantap" position="0.5 2 -1" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
           opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material="" geometry="">

@@ -1,4 +1,0 @@
-/* Copyright (c) 2018 8th Wall, Inc. All Rights Reserved */
-!function(){const s=document.currentScript||[].find.call(document.scripts,e=>/xrweb(\?.*)?$/.test(e.src)),getAppKeyFromTag=()=>{const e=s.getAttribute("appKey");if(e)return e;const t=s.src.match(/app[kK]ey=([a-zA-Z0-9]+)/);if(!t){const e="Missing 8th Wall appKey";throw console.error(e,s),alert(e),new Error(e)}return t[1]},useAsync="false"!==s.getAttribute("async"),signed="https://cdn.8thwall.com/xr-15.0.9.487.js",src=signed||`${s.src}?appKey=${getAppKeyFromTag()}`,withCredentials=!signed;if(useAsync){const e=document.createElement("SCRIPT");withCredentials||e.setAttribute("crossorigin","anonymous"),e.src=src,e.setAttribute("async","true"),document.head.appendChild(e)}else{const xhr=new XMLHttpRequest;xhr.onload=function(){eval(xhr.responseText)},xhr.open("GET",src,!1),// Synchronous XMLHttpRequest on the main thread
-xhr.withCredentials=withCredentials,xhr.send(null)}}();
-// # sourceURL=xrweb.js

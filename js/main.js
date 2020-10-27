@@ -14,7 +14,7 @@ function showPosition(position) {
 }
 
 let isOpening = false;
-function open(url) {
+function openurl(url) {
     if (!isOpening) {
         window.open(url);
         isOpening = true;
@@ -44,27 +44,27 @@ AFRAME.registerComponent('ar-scene', {
 
         const image1 = document.querySelector('#index1');
         image1.addEventListener('click', function (e) {
-            open("https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=linguiças");
+            openurl("https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=linguiças");
         })
         const image2 = document.querySelector('#index2');
         image2.addEventListener('click', function (e) {
-            open("https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=peito%20de%20peru");
+            openurl("https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=peito%20de%20peru");
         })
         const image3 = document.querySelector('#index3');
         image3.addEventListener('click', function (e) {
-            open("https://www.sadia.com.br/bio/");
+            openurl("https://www.sadia.com.br/bio/");
         })
         const image4 = document.querySelector('#index4');
         image4.addEventListener('click', function (e) {
-            open("https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=frango");
+            openurl("https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=frango");
         })
         const image5 = document.querySelector('#index5');
         image5.addEventListener('click', function (e) {
-            open("https://www.sadia.com.br/quantomaisvocesabe/menu-da-semana/semana-1/");
+            openurl("https://www.sadia.com.br/quantomaisvocesabe/menu-da-semana/semana-1/");
         })
         const image6 = document.querySelector('#index6');
         image6.addEventListener('click', function (e) {
-            open("https://www.sadia.com.br/");
+            openurl("https://www.sadia.com.br/");
         })
     }
 })

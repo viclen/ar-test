@@ -4,7 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>GeoAR.js demo</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <title>Globo AR - Sadia</title>
 
     <link rel="stylesheet" href="style/style.css">
 
@@ -13,6 +17,9 @@
     <script src="./js/aframe-ar-nft.js"></script>
 
     <script src="./js/main.js"></script>
+    <script>
+        THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
+    </script>
 </head>
 
 <body style="margin: 0; overflow: hidden;">
@@ -33,8 +40,8 @@
             <img id="myCustomImage" src="./img/preload.jpg">
         </a-assets>
 
-        <a-entity visible="false" id="objects" look-at="[gps-camera]" smooth="count: 10; threshold: 5;"
-            raycaster="objects: .clickable" cursor="fuse: false; rayOrigin: mouse;">
+        <a-entity visible="false" id="objects" look-at="[gps-camera]" smooth="true" raycaster="objects: .clickable"
+            cursor="fuse: false; rayOrigin: mouse;">
             <a-entity visible="false" id="screen">
                 <a-image id="index1" class="clickable" position="0.5 2 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
                     height="0.9" opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material=""
@@ -72,8 +79,7 @@
             </a-entity>
         </a-entity>
 
-        <a-entity camera gps-camera rotation-reader raycaster="objects: .clickable"
-            cursor="fuse: true; rayOrigin: mouse;" wasd-controls-enabled="false"
+        <a-entity camera gps-camera rotation-reader wasd-controls-enabled="false"
             look-controls="reverseMouseDrag: true; reverseTouchDrag: true;">
         </a-entity>
 

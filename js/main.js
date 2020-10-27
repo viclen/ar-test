@@ -21,6 +21,8 @@ function open(url) {
         setTimeout(() => isOpening = false, 100);
     }
 
+    console.log(url);
+
     return isOpening;
 }
 

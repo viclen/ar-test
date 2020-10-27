@@ -29,10 +29,10 @@ function openurl(url) {
 AFRAME.registerComponent('log-hover', {
     init: function () {
         this.el.addEventListener('mouseenter', function () {
-            console.log('mouseenter', this.el.id);
+            console.log('mouseenter', this.id);
         });
         this.el.addEventListener('mouseleave', function () {
-            console.log('mouseleave', this.el.id);
+            console.log('mouseleave', this.id);
         });
     }
 });

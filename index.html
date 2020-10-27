@@ -35,11 +35,7 @@
       <img id="myCustomImage" src="./img/preload.jpg">
     </a-assets>
 
-    <a-camera raycaster="objects: .cantap" cursor="fuse: false; rayOrigin: mouse;" wasd-controls-enabled="true"
-      camera="" position="" rotation="" look-controls="" wasd-controls="">
-    </a-camera>
-
-    <a-marker preset="hiro">
+    <a-marker preset="hiro" smooth="count: 10; threshhold: 3;">
       <a-entity visible="false" id="screen" rotation="-90 360 0">
         <a-image id="index1" class="cantap" position="0.5 2 -1" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
           opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material="" geometry="">
@@ -70,6 +66,10 @@
         </a-image>
       </a-entity>
     </a-marker>
+
+    <a-entity camera raycaster="objects: .cantap" cursor="fuse: false; rayOrigin: mouse;" wasd-controls-enabled="false"
+      position="" rotation="" look-controls="" wasd-controls="">
+    </a-entity>
 
     <canvas class="a-canvas a-grab-cursor a-mouse-cursor-hover" data-aframe-canvas="true" width="1204"
       height="980"></canvas>

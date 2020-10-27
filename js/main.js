@@ -7,7 +7,7 @@ AFRAME.registerComponent('tap-place', {
 
             screen.setAttribute('position', '0.2 1.6 -2.7');
             screen.setAttribute('visible', 'true');
-            screen.setAttribute('scale', '0.8 0.8 0.8');
+            screen.setAttribute('scale', '1 1 1');
 
             clickToStart.remove();
         });

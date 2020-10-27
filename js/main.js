@@ -24,11 +24,11 @@ function openurl(url) {
 
 AFRAME.registerComponent('ar-link', {
     init: function () {
-        const el = this.el;
-        el.addEventListener('click', function (event) {
+        this.el.addEventListener('click', (event) => {
             event.stopPropagation();
             event.preventDefault();
-            if (this.id === el.id)
+            console.log('click', this.el.id);
+            if (event.target.id === this.el.id)
                 openurl(this.getAttribute('href'));
         });
     }

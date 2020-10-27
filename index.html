@@ -28,7 +28,10 @@
             text.setAttribute("visible", "true");
         }
 
-        document.getElementById("clickToStart").addEventListener('click', () => getLocation(showPosition));
+        document.getElementById("clickToStart").addEventListener('click', function () {
+            this.remove();
+            getLocation(showPosition)
+        });
     </script>
 </head>
 

@@ -38,51 +38,47 @@
         </a-assets>
 
         <a-entity visible="false" id="objects" smooth="true" smoothCount="10" smoothTolerance=".1" smoothThreshold="5"
-            emitevents="true">
+            emitevents="true" raycaster="objects: .clickable" cursor="fuse: true; rayOrigin: mouse;">
             <a-entity visible="false" id="screen">
-                <a-image ar-link href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=linguiças"
-                    id="index1" class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1" width="0.9"
+                <a-image id="index1" class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1" width="0.9"
                     height="0.9" opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material=""
-                    geometry="">
+                    geometry="" ar-link
+                    href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=linguiças">
                 </a-image>
 
-                <a-image ar-link
-                    href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=peito%20de%20peru"
-                    id="index2" class="clickable" position="0.5 1 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
+                <a-image id="index2" class="clickable" position="0.5 1 0" rotation="0 0 0" scale="1 1 1" width="0.9"
                     height="0.9" opacity="1" src="#aprenda-receitas-de-peru" roughness="1" visible="true" material=""
-                    geometry="">
+                    geometry="" ar-link
+                    href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=peito+de+peru">
                 </a-image>
 
-                <a-image ar-link href="https://www.sadia.com.br/bio/" id="index3" class="clickable" position="0.5 -0 0"
-                    rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9" opacity="1" src="#de-onde-vem" roughness="1"
-                    visible="true" material="" geometry="">
+                <a-image id="index3" class="clickable" position="0.5 0 0" rotation="0 0 0" scale="1 1 1" width="0.9"
+                    height="0.9" opacity="1" src="#de-onde-vem" roughness="1" visible="true" material="" geometry=""
+                    ar-link href="https://www.sadia.com.br/bio/">
                 </a-image>
 
-                <a-image ar-link href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=frango"
-                    id="index4" class="clickable" position="0.5 -1 0" rotation="0 0 0" scale="1 1 1" width="0.9"
+                <a-image id="index4" class="clickable" position="0.5 -1 0" rotation="0 0 0" scale="1 1 1" width="0.9"
                     height="0.9" opacity="1" src="#prepare-receitas-sobrecoxa" roughness="1" visible="true" material=""
-                    geometry="">
+                    geometry="" ar-link
+                    href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=frango">
                 </a-image>
 
-                <a-image ar-link href="https://www.sadia.com.br/quantomaisvocesabe/menu-da-semana/semana-1/" id="index5"
-                    class="clickable" position="0.5 -2 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
-                    opacity="1" src="#descubra-menu-para-semana" roughness="1" visible="true" material="" geometry="">
+                <a-image id="index5" class="clickable" position="0.5 -2 0" rotation="0 0 0" scale="1 1 1" width="0.9"
+                    height="0.9" opacity="1" src="#descubra-menu-para-semana" roughness="1" visible="true" material=""
+                    geometry="" ar-link href="https://www.sadia.com.br/quantomaisvocesabe/menu-da-semana/semana-1/">
                 </a-image>
 
-                <a-image id="logo-sadia-index" class="clickable"
-                    position="-1.1 -0.8 0" rotation="0 0 0" scale="1 1 1" width="2.5" height="3.8" opacity="1"
-                    src="#logo-sadia" roughness="1" visible="true" material="" geometry="">
+                <a-image id="logo-sadia-index" position="-1.1 -0.8 0" rotation="0 0 0" scale="1 1 1" width="2.5"
+                    height="3.8" opacity="1" src="#logo-sadia" roughness="1" visible="true" material="" geometry="">
                 </a-image>
 
-                <a-image id="index6" class="clickable" position="-1 1.9 0" rotation="0 0 0" scale="1 1 1" width="1.5"
-                    height="1.5" opacity="1" src="#texto-quanto-mais" roughness="1" visible="true" material=""
-                    geometry="">
+                <a-image id="index6" position="-1 1.9 0" rotation="0 0 0" scale="1 1 1" width="1.5" height="1.5"
+                    opacity="1" src="#texto-quanto-mais" roughness="1" visible="true" material="" geometry="">
                 </a-image>
             </a-entity>
         </a-entity>
 
-        <a-entity camera gps-camera rotation-reader wasd-controls-enabled="false" position rotation look-controls
-            raycaster="objects: .clickable" cursor="fuse: true; rayOrigin: mouse;">
+        <a-entity camera gps-camera rotation-reader wasd-controls-enabled="false" position rotation look-controls>
         </a-entity>
 
         <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1204" height="980"></canvas>

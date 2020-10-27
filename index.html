@@ -38,7 +38,7 @@
         </a-assets>
 
         <a-entity visible="false" id="objects" smooth="true" smoothCount="10" smoothTolerance=".1" smoothThreshold="5"
-            emitevents="true" raycaster="objects: .clickable" cursor="fuse: true; rayOrigin: mouse;">
+            emitevents="true">
             <a-entity visible="false" id="screen">
                 <a-image id="index1" class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1" width="0.9"
                     height="0.9" opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material=""
@@ -78,7 +78,8 @@
             </a-entity>
         </a-entity>
 
-        <a-entity camera gps-camera rotation-reader wasd-controls-enabled="false" position rotation look-controls>
+        <a-entity camera gps-camera rotation-reader wasd-controls-enabled="false" position rotation look-controls
+            raycaster="objects: .clickable" cursor="fuse: true; rayOrigin: mouse;">
         </a-entity>
 
         <canvas class="a-canvas a-grab-cursor" data-aframe-canvas="true" width="1204" height="980"></canvas>

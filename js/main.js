@@ -41,11 +41,11 @@ AFRAME.registerComponent('ar-scene', {
         clickToStart.addEventListener('click', () => {
             const screen = document.getElementById('screen');
 
-            screen.setAttribute('position', '0 0 0');
+            screen.setAttribute('position', '0 0 -1');
             screen.setAttribute('visible', 'true');
             screen.setAttribute('scale', '0.1 0.1 0.1');
 
-            getLocation(showPosition)
+            getLocation(showPosition);
 
             clickToStart.remove();
         });

@@ -41,9 +41,13 @@
             text.setAttribute("visible", "true");
         }
 
-        document.getElementById("clickToStart").addEventListener('click', function () {
-            this.remove();
-            getLocation(showPosition)
+        document.onreadystatechange = () => {
+            if (document.readyState == "complete") {
+                document.getElementById("clickToStart").addEventListener('click', function () {
+                    this.remove();
+                    getLocation(showPosition)
+                });
+            }
         });
     </script>
 </body>

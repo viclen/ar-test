@@ -16,10 +16,12 @@ function showPosition(position) {
 let isOpening = false;
 function open(url) {
     if (!isOpening) {
-        isOpening = true;
         window.open(url);
+        isOpening = true;
         setTimeout(() => isOpening = false, 100);
     }
+
+    return isOpening;
 }
 
 AFRAME.registerComponent('ar-scene', {

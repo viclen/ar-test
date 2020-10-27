@@ -8,69 +8,11 @@
 
     <link rel="stylesheet" href="style/style.css">
 
-    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="./js/aframe.min.js"></script>
+    <script src="./js/aframe-look-at-component.min.js"></script>
+    <script src="./js/aframe-ar-nft.js"></script>
 
-    <script>
-        function getLocation(cb = () => { }) {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(cb);
-            } else {
-                alert("Geolocation is not supported by this browser.");
-            }
-        }
-
-        function showPosition(position) {
-            const objects = document.getElementById("objects");
-
-            objects.setAttribute("gps-entity-place", "latitude: " + position.coords.latitude + "; longitude: " + position.coords.longitude);
-            objects.setAttribute("visible", "true");
-        }
-
-        AFRAME.registerComponent('ar-scene', {
-            init: function () {
-                const clickToStart = document.getElementById('clickToStart');
-
-                clickToStart.addEventListener('click', () => {
-                    const screen = document.getElementById('screen');
-
-                    screen.setAttribute('position', '0 0 -6');
-                    screen.setAttribute('visible', 'true');
-                    screen.setAttribute('scale', '1 1 1');
-
-                    getLocation(showPosition)
-
-                    clickToStart.remove();
-                });
-
-                const image1 = document.querySelector('#index1');
-                image1.addEventListener('click', function (e) {
-                    window.open("https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=linguiças");
-                })
-                const image2 = document.querySelector('#index2');
-                image2.addEventListener('click', function (e) {
-                    window.open("https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=peito%20de%20peru");
-                })
-                const image3 = document.querySelector('#index3');
-                image3.addEventListener('click', function (e) {
-                    window.open("https://www.sadia.com.br/bio/");
-                })
-                const image4 = document.querySelector('#index4');
-                image4.addEventListener('click', function (e) {
-                    window.open("https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=frango");
-                })
-                const image5 = document.querySelector('#index5');
-                image5.addEventListener('click', function (e) {
-                    window.open("https://www.sadia.com.br/quantomaisvocesabe/menu-da-semana/semana-1/");
-                })
-                const image6 = document.querySelector('#index6');
-                image6.addEventListener('click', function (e) {
-                    window.open("https://www.sadia.com.br/");
-                })
-            }
-        })
-    </script>
+    <script src="./js/main.js"></script>
 </head>
 
 <body style="margin: 0; overflow: hidden;">
@@ -131,7 +73,7 @@
         </a-entity>
 
         <a-entity camera gps-camera rotation-reader raycaster="objects: .cantap" cursor="fuse: true; rayOrigin: mouse;"
-            wasd-controls-enabled="false" look-controls="touchEnabled: false">
+            wasd-controls-enabled="false" look-controls="reverseMouseDrag: true; reverseTouchDrag: true;">
         </a-entity>
 
         <canvas class="a-canvas a-grab-cursor a-mouse-cursor-hover" data-aframe-canvas="true" width="1204"

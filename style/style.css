@@ -5,20 +5,23 @@ body {
 
 .fixed-front {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
     background: rgba(0, 0, 0, 0.3);
 }
 
 .centered-text {
-    position: absolute;
+    position: fixed;
     font-family: sans-serif;
     text-transform: uppercase;
     color: white;
     top: 50%;
+    left: 0;
+    right: 0;
     transform: translateY(-50%);
-    width: 100vw;
     text-align: center;
     z-index: 100;
 }

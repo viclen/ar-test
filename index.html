@@ -21,7 +21,22 @@
 
 <body style="margin: 0; overflow: hidden;">
     <div class="fixed-front" id="clickToStart">
-        <div class="centered-text">Clique para iniciar</div>
+        <div class="centered-modal">
+            <p>
+                Qual modo você deseja testar?
+            </p>
+            <div class="buttons">
+                <button class="btn" id="chooseMarker">
+                    Marker
+                </button>
+                <button class="btn" id="chooseLocation">
+                    Localização
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed-front">
     </div>
 
     <a-scene ar-scene vr-mode-ui="enabled: false" embedded
@@ -38,8 +53,8 @@
         </a-assets>
 
         <a-entity visible="false" id="objects" smooth="true" smoothCount="10" smoothTolerance=".1" smoothThreshold="5"
-            emitevents="true">
-            <a-entity visible="false" id="screen">
+            emitevents="true" look-at="[gps-camera]">
+            <a-entity visible="false" id="screenLocation" position="0 0 -1" scale="0.1 0.1 0.1">
                 <a-image id="index1" class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1" width="0.9"
                     height="0.9" opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material=""
                     geometry="" ar-link
@@ -77,6 +92,44 @@
                 </a-image>
             </a-entity>
         </a-entity>
+
+        <a-marker preset="hiro" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" id="marker">
+            <a-entity visible="false" id="screenMarker" rotation="-90 360 0" position="0 0 -1" scale="0.8 0.8 0.8">
+                <a-image id="index1" class="clickable" position="0.5 2 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
+                    height="0.9" opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material=""
+                    geometry="">
+                </a-image>
+
+                <a-image id="index2" class="clickable" position="0.5 1 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
+                    height="0.9" opacity="1" src="#aprenda-receitas-de-peru" roughness="1" visible="true" material=""
+                    geometry="">
+                </a-image>
+
+                <a-image id="index3" class="clickable" position="0.5 -0 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
+                    height="0.9" opacity="1" src="#de-onde-vem" roughness="1" visible="true" material="" geometry="">
+                </a-image>
+
+                <a-image id="index4" class="clickable" position="0.5 -1 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
+                    height="0.9" opacity="1" src="#prepare-receitas-sobrecoxa" roughness="1" visible="true" material=""
+                    geometry="">
+                </a-image>
+
+                <a-image id="index5" class="clickable" position="0.5 -2 -1" rotation="0 0 0" scale="1 1 1" width="0.9"
+                    height="0.9" opacity="1" src="#descubra-menu-para-semana" roughness="1" visible="true" material=""
+                    geometry="">
+                </a-image>
+
+                <a-image id="logo-sadia-index" class="clickable" position="-1.1 -0.8 -1.3" rotation="0 0 0"
+                    scale="1 1 1" width="2.5" height="3.8" opacity="1" src="#logo-sadia" roughness="1" visible="true"
+                    material="" geometry="">
+                </a-image>
+
+                <a-image id="index6" class="clickable" position="-1 1.9 -1" rotation="0 0 0" scale="1 1 1" width="1.5"
+                    height="1.5" opacity="1" src="#texto-quanto-mais" roughness="1" visible="true" material=""
+                    geometry="">
+                </a-image>
+            </a-entity>
+        </a-marker>
 
         <a-entity camera gps-camera rotation-reader wasd-controls-enabled="false" position rotation look-controls
             raycaster="objects: .clickable" cursor="fuse: true; rayOrigin: mouse;">

@@ -18,17 +18,30 @@ body {
     background: rgba(0, 0, 0, 0.3);
 }
 
-.centered-text {
+.centered-modal {
     position: fixed;
-    font-family: sans-serif;
-    text-transform: uppercase;
-    color: white;
     top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    text-align: center;
-    z-index: 100;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff85;
+    padding: 20px;
+}
+
+.centered-modal .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.centered-modal .buttons .btn {
+    background: #007bff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+    flex: 1;
+    margin: 5px;
 }
 
 .hidden {

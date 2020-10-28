@@ -25,7 +25,7 @@ function openurl(url) {
         window.open(url);
         console.log(url);
         isOpening = true;
-        setTimeout(() => isOpening = false, 500);
+        setTimeout(() => isOpening = false, 200);
     }
 }
 

@@ -74,13 +74,15 @@ AFRAME.registerComponent('ar-scene', {
         });
 
         chooseLocation.addEventListener('click', () => {
-            initialized = true;
-            document.getElementById("marker").remove();
-            document.getElementById("camera").setAttribute("rotation-reader", "");
-            document.getElementById("camera").setAttribute("gps-camera", "");
-            showScreen("Location");
-            getLocation(showPosition);
-            clickToStart.remove();
+            getLocation((position) => {
+                initialized = true;
+                document.getElementById("marker").remove();
+                document.getElementById("camera").setAttribute("rotation-reader", "");
+                document.getElementById("camera").setAttribute("gps-camera", "");
+                showScreen("Location");
+                clickToStart.remove();
+                showPosition(position);
+            });
         });
     }
 });

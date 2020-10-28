@@ -60,8 +60,7 @@
 
         <a-entity visible="false" id="objects" smooth="true" smoothCount="10" smoothTolerance=".1" smoothThreshold="5"
             emitevents="true" look-at="[gps-camera]">
-            <a-entity physics-image-target="name: 03" visible="false" id="screenLocation" position="0 0 -1"
-                scale="0.1 0.1 0.1">
+            <a-entity visible="false" id="screenLocation" position="0 0 -1" scale="0.1 0.1 0.1">
                 <a-image class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
                     opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material="" geometry=""
                     ar-link href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=linguiças">
@@ -99,8 +98,7 @@
 
         <a-marker preset="hiro" smooth="true" smoothCount="10" smoothTolerance=".1" smoothThreshold="5" id="marker"
             emitevents="true">
-            <a-entity physics-image-target="name: 03" visible="false" id="screenMarker" rotation="-110 0 0"
-                position="0 0 0" scale="1 1 1">
+            <a-entity visible="false" id="screenMarker" rotation="-105 0 0" position="0 0 0" scale="1 1 1">
                 <a-image class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
                     opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material="" geometry=""
                     ar-link href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=linguiças">
@@ -136,8 +134,9 @@
             </a-entity>
         </a-marker>
 
-        <a-entity id="camera" camera wasd-controls-enabled="false" look-controls raycaster="objects: .clickable"
-            cursor="fuse: false; rayOrigin: mouse;">
+        <a-entity id="camera" camera wasd-controls-enabled="false" look-controls
+            raycaster="objects: .clickable; far: 10000; showLine: true;" cursor="fuse: false; rayOrigin: mouse;" line="color: orange; 
+            opacity:0.5">
         </a-entity>
 
         <a-light type="ambient" intensity="1" light=""></a-light>

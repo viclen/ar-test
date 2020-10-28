@@ -99,7 +99,7 @@
 
         <a-marker preset="hiro" smooth="true" smoothCount="10" smoothTolerance=".01" smoothThreshold="5" id="marker">
             <a-entity physics-image-target="name: 03" visible="false" id="screenMarker" rotation="-90 0 0"
-                position="0 0 0" scale="0.8 0.8 0.8">
+                position="0 0 0" scale="1 1 1">
                 <a-image class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
                     opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material="" geometry=""
                     ar-link href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=linguiças">
@@ -135,7 +135,7 @@
             </a-entity>
         </a-marker>
 
-        <a-entity camera gps-camera rotation-reader wasd-controls-enabled="false" position rotation look-controls
+        <a-entity id="camera" camera gps-camera wasd-controls-enabled="false" look-controls
             raycaster="objects: .clickable" cursor="fuse: true; rayOrigin: mouse;">
         </a-entity>
 

@@ -38,28 +38,28 @@ function showScreen(name) {
     screen.setAttribute('visible', 'true');
 }
 
-// AFRAME.registerComponent('ar-link', {
-//     init: function () {
-//         this.el.addEventListener('click', (event) => {
-//             event.stopPropagation();
-//             event.preventDefault();
-//             console.log('click', this.el.id);
-//             if (event.target.id === this.el.id)
-//                 openurl(this.el.getAttribute('href'));
-//         });
-//     }
-// });
+AFRAME.registerComponent('ar-link', {
+    init: function () {
+        this.el.addEventListener('click', (event) => {
+            event.stopPropagation();
+            event.preventDefault();
+            console.log('click', this.el.id);
+            if (event.target.id === this.el.id)
+                openurl(this.el.getAttribute('href'));
+        });
+    }
+});
 
 AFRAME.registerComponent('ar-scene', {
     init: function () {
-        // if (!window.mobileCheck()) {
-        //     document.getElementById("arScene").remove();
+        if (!window.mobileCheck()) {
+            document.getElementById("arScene").remove();
 
-        //     document.getElementById("clickToStart").innerHTML = `
-        //         <img src="./img/qr-code.png" />
-        //     `;
-        //     return;
-        // }
+            document.getElementById("clickToStart").innerHTML = `
+                <img src="./img/qr-code.png" />
+            `;
+            return;
+        }
 
         const clickToStart = document.getElementById('clickToStart');
 
@@ -84,25 +84,3 @@ AFRAME.registerComponent('ar-scene', {
         });
     }
 });
-
-AFRAME.registerComponent('log-intersection', {
-    dependencies: ['raycaster'],
-
-    init: function () {
-        this.el.addEventListener('raycaster-intersected', (event) => {
-            if (this.el.getAttribute("class").includes('clickable')) {
-                lastItem = this.el;
-                console.log(event.detail.getIntersection(this.el));
-            } else {
-                lastItem = false;
-            }
-        });
-    }
-});
-
-// document.addEventListener("click", function () {
-//     if (initialized && lastItem) {
-//         console.log('click', lastItem.getAttribute("src"));
-//         openurl(lastItem.getAttribute('href'));
-//     }
-// });

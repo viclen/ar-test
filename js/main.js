@@ -67,6 +67,8 @@ AFRAME.registerComponent('ar-scene', {
                 clickToStart.remove();
             });
         } else {
+            console.log("Not mobile");
+
             document.getElementById("arScene").remove();
 
             document.getElementById("clickToStart").innerHTML = `

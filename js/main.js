@@ -72,7 +72,7 @@ document.onload = () => {
     if (window.mobileCheck()) {
         document.getElementById("arScene").remove();
 
-        document.querySelector(".fixed-front").innerHTML = `
+        document.getElementById("clickToStart").innerHTML = `
             <img src="./img/qr-code.png" />
         `;
     }

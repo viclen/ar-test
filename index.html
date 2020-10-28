@@ -58,8 +58,7 @@
             <img id="myCustomImage" src="./img/preload.jpg">
         </a-assets>
 
-        <a-entity visible="false" id="objects" smooth="true" smoothCount="10" smoothTolerance=".1" smoothThreshold="5"
-            emitevents="true" look-at="[camera]">
+        <a-entity visible="false" id="objects" look-at="[camera]">
             <a-entity visible="false" id="screenLocation" position="0 0 -1" scale="0.1 0.1 0.1">
                 <a-image log-intersection class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1"
                     width="0.9" height="0.9" opacity="1" src="#descubra-novos-preparos" visible="true" ar-link
@@ -96,35 +95,39 @@
             </a-entity>
         </a-entity>
 
-        <a-marker preset="hiro" smooth="true" smoothCount="10" smoothTolerance=".1" smoothThreshold="5" id="marker"
-            emitevents="true">
+        <a-marker preset="hiro">
             <a-entity visible="false" id="screenMarker" rotation="-90 0 0" position="0 0 0" scale="1 1 1">
                 <a-image log-intersection class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1"
                     animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+                    animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
                     width="0.9" height="0.9" opacity="1" src="#descubra-novos-preparos" visible="true" ar-link
                     href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=linguiças">
                 </a-image>
 
                 <a-image log-intersection class="clickable" position="0.5 1 0" rotation="0 0 0" scale="1 1 1"
                     animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+                    animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
                     width="0.9" height="0.9" opacity="1" src="#aprenda-receitas-de-peru" visible="true" ar-link
                     href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=peito+de+peru">
                 </a-image>
 
                 <a-image log-intersection class="clickable" position="0.5 0 0" rotation="0 0 0" scale="1 1 1"
                     animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+                    animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
                     width="0.9" height="0.9" opacity="1" src="#de-onde-vem" visible="true" ar-link
                     href="https://www.sadia.com.br/bio/">
                 </a-image>
 
                 <a-image log-intersection class="clickable" position="0.5 -1 0" rotation="0 0 0" scale="1 1 1"
                     animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+                    animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
                     width="0.9" height="0.9" opacity="1" src="#prepare-receitas-sobrecoxa" visible="true" ar-link
                     href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=frango">
                 </a-image>
 
                 <a-image log-intersection class="clickable" position="0.5 -2 0" rotation="0 0 0" scale="1 1 1"
                     animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+                    animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1"
                     width="0.9" height="0.9" opacity="1" src="#descubra-menu-para-semana" visible="true" ar-link
                     href="https://www.sadia.com.br/quantomaisvocesabe/menu-da-semana/semana-1/">
                 </a-image>

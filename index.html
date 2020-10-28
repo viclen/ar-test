@@ -73,7 +73,7 @@
 
         <a-entity visible="false" id="objects" smooth="true" look-at="[camera]" smoothCount="10" smoothTolerance=".1"
             smoothThreshold="5">
-            <a-entity visible="false" id="screenLocation" position="0 0 1" rotation="0 180 0" scale="0.1 0.1 0.1">
+            <a-entity visible="false" id="screenLocation" position="0 0 -1" rotation="0 0 0" scale="0.1 0.1 0.1">
                 <a-image log-intersection class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1"
                     width="0.9" height="0.9" opacity="1" src="#descubra-novos-preparos" visible="true" ar-link
                     href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=linguiças">
@@ -146,7 +146,7 @@
             </a-entity>
         </a-marker>
 
-        <a-entity camera id="camera" position="0 0 0" wasd-controls-enabled="false" look-controls
+        <a-entity camera id="camera" wasd-controls-enabled="false" look-controls
             raycaster="objects: .clickable; interval: 1000; near: 2; far: 20; direction: 0 0 1"
             cursor="fuse: true; rayOrigin: mouse;" listen-ray>
         </a-entity>

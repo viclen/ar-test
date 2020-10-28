@@ -29,7 +29,7 @@ function openurl(url) {
     }
 }
 
-let lastItem;
+let lastItem = false;
 
 function showScreen(name) {
     const screen = document.getElementById('screen' + name);
@@ -89,7 +89,16 @@ AFRAME.registerComponent('log-intersection', {
             if (this.el.getAttribute("class").includes('clickable')) {
                 lastItem = this.el;
                 console.log('Hit:', this.el.getAttribute("src"));
+            } else {
+                lastItem = false;
             }
         });
+    }
+});
+
+document.addEventListener("click", function () {
+    if (lastItem) {
+        console.log('click', lastItem.getAttribute("src"));
+        openurl(lastItem.getAttribute('href'));
     }
 });

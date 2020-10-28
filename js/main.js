@@ -84,7 +84,7 @@ AFRAME.registerComponent('log-intersection', {
 
     init: function () {
         this.el.addEventListener('raycaster-intersection', () => {
-            console.log('Hit:', this.el.id);
+            console.log('Hit:', this.el);
         });
     }
 });

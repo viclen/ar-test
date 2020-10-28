@@ -30,6 +30,8 @@ function openurl(url) {
 }
 
 let lastItem = false;
+let itemTimeout = 0;
+let initialized = false;
 
 function showScreen(name) {
     const screen = document.getElementById('screen' + name);
@@ -65,12 +67,14 @@ AFRAME.registerComponent('ar-scene', {
         const chooseLocation = document.getElementById("chooseLocation");
 
         chooseMarker.addEventListener('click', () => {
+            initialized = true;
             document.getElementById("objects").remove();
             showScreen("Marker");
             clickToStart.remove();
         });
 
         chooseLocation.addEventListener('click', () => {
+            initialized = true;
             document.getElementById("marker").remove();
             document.getElementById("camera").setAttribute("rotation-reader", "");
             document.getElementById("camera").setAttribute("gps-camera", "");
@@ -88,7 +92,6 @@ AFRAME.registerComponent('log-intersection', {
         this.el.addEventListener('raycaster-intersection', () => {
             if (this.el.getAttribute("class").includes('clickable')) {
                 lastItem = this.el;
-                // console.log('Hit:', this.el.getAttribute("src"));
             } else {
                 lastItem = false;
             }
@@ -97,7 +100,7 @@ AFRAME.registerComponent('log-intersection', {
 });
 
 document.addEventListener("click", function () {
-    if (lastItem) {
+    if (initialized && lastItem) {
         console.log('click', lastItem.getAttribute("src"));
         openurl(lastItem.getAttribute('href'));
     }

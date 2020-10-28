@@ -97,8 +97,9 @@
             </a-entity>
         </a-entity>
 
-        <a-marker preset="hiro" smooth="true" smoothCount="10" smoothTolerance=".1" smoothThreshold="5" id="marker">
-            <a-entity physics-image-target="name: 03" visible="false" id="screenMarker" rotation="-120 0 0"
+        <a-marker preset="hiro" smooth="true" smoothCount="10" smoothTolerance=".1" smoothThreshold="5" id="marker"
+            emitevents="true">
+            <a-entity physics-image-target="name: 03" visible="false" id="screenMarker" rotation="-110 0 0"
                 position="0 0 0" scale="1 1 1">
                 <a-image class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
                     opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material="" geometry=""

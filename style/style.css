@@ -16,7 +16,6 @@ body {
     left: 0;
     right: 0;
     z-index: 100;
-    background: rgba(0, 0, 0, 0.3);
 }
 
 .fixed-front img {
@@ -45,7 +44,7 @@ body {
 .centered-modal .buttons .btn {
     background: #007bff;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 5px 10px;
     color: white;
     outline: none;

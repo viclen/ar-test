@@ -99,7 +99,7 @@ AFRAME.registerComponent('log-intersection', {
     }
 });
 
-AFRAME.registerComponent('raycaster-listen', {
+AFRAME.registerComponent('listen-ray', {
     init: function () {
         // Use events to figure out what raycaster is listening so we don't have to
         // hardcode the raycaster.

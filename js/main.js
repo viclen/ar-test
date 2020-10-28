@@ -48,32 +48,43 @@ AFRAME.registerComponent('ar-link', {
 
 AFRAME.registerComponent('ar-scene', {
     init: function () {
-        // if (window.mobileCheck()) {
-            const clickToStart = document.getElementById('clickToStart');
-
-            const chooseMarker = document.getElementById("chooseMarker");
-            const chooseLocation = document.getElementById("chooseLocation");
-
-            chooseMarker.addEventListener('click', () => {
-                document.getElementById("objects").remove();
-                showScreen("Marker");
-                clickToStart.remove();
-            });
-
-            chooseLocation.addEventListener('click', () => {
-                document.getElementById("marker").remove();
-                document.getElementById("camera").setAttribute("rotation-reader", "");
-                document.getElementById("camera").setAttribute("gps-camera", "");
-                showScreen("Location");
-                getLocation(showPosition);
-                clickToStart.remove();
-            });
-        // } else {
+        // if (!window.mobileCheck()) {
         //     document.getElementById("arScene").remove();
 
         //     document.getElementById("clickToStart").innerHTML = `
         //         <img src="./img/qr-code.png" />
         //     `;
+        //     return;
         // }
+
+        const clickToStart = document.getElementById('clickToStart');
+
+        const chooseMarker = document.getElementById("chooseMarker");
+        const chooseLocation = document.getElementById("chooseLocation");
+
+        chooseMarker.addEventListener('click', () => {
+            document.getElementById("objects").remove();
+            showScreen("Marker");
+            clickToStart.remove();
+        });
+
+        chooseLocation.addEventListener('click', () => {
+            document.getElementById("marker").remove();
+            document.getElementById("camera").setAttribute("rotation-reader", "");
+            document.getElementById("camera").setAttribute("gps-camera", "");
+            showScreen("Location");
+            getLocation(showPosition);
+            clickToStart.remove();
+        });
+    }
+});
+
+AFRAME.registerComponent('log-intersection', {
+    dependencies: ['raycaster'],
+
+    init: function () {
+        this.el.addEventListener('raycaster-intersection', () => {
+            console.log('Hit:', this.el.id);
+        });
     }
 });

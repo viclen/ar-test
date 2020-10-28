@@ -18,7 +18,6 @@
     <script src="./js/gesture-detector.js"></script>
     <script src="./js/gesture-handler.js"></script>
 
-    <script src="./js/raycaster.js"></script>
     <script src="./js/main.js"></script>
 </head>
 
@@ -62,27 +61,27 @@
         <a-entity visible="false" id="objects" smooth="true" smoothCount="10" smoothTolerance=".1" smoothThreshold="5"
             emitevents="true" look-at="[gps-camera]">
             <a-entity visible="false" id="screenLocation" position="0 0 -1" scale="0.1 0.1 0.1">
-                <a-image class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+                <a-image log-intersection class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
                     opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material="" geometry=""
                     ar-link href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=linguiças">
                 </a-image>
 
-                <a-image class="clickable" position="0.5 1 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+                <a-image log-intersection class="clickable" position="0.5 1 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
                     opacity="1" src="#aprenda-receitas-de-peru" roughness="1" visible="true" material="" geometry=""
                     ar-link href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=peito+de+peru">
                 </a-image>
 
-                <a-image class="clickable" position="0.5 0 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+                <a-image log-intersection class="clickable" position="0.5 0 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
                     opacity="1" src="#de-onde-vem" roughness="1" visible="true" material="" geometry="" ar-link
                     href="https://www.sadia.com.br/bio/">
                 </a-image>
 
-                <a-image class="clickable" position="0.5 -1 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+                <a-image log-intersection class="clickable" position="0.5 -1 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
                     opacity="1" src="#prepare-receitas-sobrecoxa" roughness="1" visible="true" material="" geometry=""
                     ar-link href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=frango">
                 </a-image>
 
-                <a-image class="clickable" position="0.5 -2 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+                <a-image log-intersection class="clickable" position="0.5 -2 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
                     opacity="1" src="#descubra-menu-para-semana" roughness="1" visible="true" material="" geometry=""
                     ar-link href="https://www.sadia.com.br/quantomaisvocesabe/menu-da-semana/semana-1/">
                 </a-image>
@@ -99,28 +98,28 @@
 
         <a-marker preset="hiro" smooth="true" smoothCount="10" smoothTolerance=".1" smoothThreshold="5" id="marker"
             emitevents="true">
-            <a-entity visible="false" id="screenMarker" rotation="-105 0 0" position="0 0 0" scale="1 1 1">
-                <a-image class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+            <a-entity visible="false" id="screenMarker" rotation="-90 0 0" position="0 0 0" scale="1 1 1">
+                <a-image log-intersection class="clickable" position="0.5 2 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
                     opacity="1" src="#descubra-novos-preparos" roughness="1" visible="true" material="" geometry=""
                     ar-link href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=linguiças">
                 </a-image>
 
-                <a-image class="clickable" position="0.5 1 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+                <a-image log-intersection class="clickable" position="0.5 1 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
                     opacity="1" src="#aprenda-receitas-de-peru" roughness="1" visible="true" material="" geometry=""
                     ar-link href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=peito+de+peru">
                 </a-image>
 
-                <a-image class="clickable" position="0.5 0 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+                <a-image log-intersection class="clickable" position="0.5 0 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
                     opacity="1" src="#de-onde-vem" roughness="1" visible="true" material="" geometry="" ar-link
                     href="https://www.sadia.com.br/bio/">
                 </a-image>
 
-                <a-image class="clickable" position="0.5 -1 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+                <a-image log-intersection class="clickable" position="0.5 -1 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
                     opacity="1" src="#prepare-receitas-sobrecoxa" roughness="1" visible="true" material="" geometry=""
                     ar-link href="https://www.sadia.com.br/quantomaisvocesabe/receitas/?ingredientes=frango">
                 </a-image>
 
-                <a-image class="clickable" position="0.5 -2 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
+                <a-image log-intersection class="clickable" position="0.5 -2 0" rotation="0 0 0" scale="1 1 1" width="0.9" height="0.9"
                     opacity="1" src="#descubra-menu-para-semana" roughness="1" visible="true" material="" geometry=""
                     ar-link href="https://www.sadia.com.br/quantomaisvocesabe/menu-da-semana/semana-1/">
                 </a-image>

@@ -17,10 +17,11 @@ body {
     right: 0;
     z-index: 100;
     text-align: center;
+    background: rgba(0, 0, 0, 0.048);
 }
 
 .fixed-front .text {
-    position: absolute;
+    position: fixed;
     font-family: sans-serif;
     text-transform: uppercase;
     color: white;

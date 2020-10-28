@@ -88,7 +88,7 @@ AFRAME.registerComponent('log-intersection', {
         this.el.addEventListener('raycaster-intersection', () => {
             if (this.el.getAttribute("class").includes('clickable')) {
                 lastItem = this.el;
-                console.log('Hit:', this.el.getAttribute("src"));
+                // console.log('Hit:', this.el.getAttribute("src"));
             } else {
                 lastItem = false;
             }

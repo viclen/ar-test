@@ -48,32 +48,30 @@ AFRAME.registerComponent('ar-link', {
 
 AFRAME.registerComponent('ar-scene', {
     init: function () {
-        const clickToStart = document.getElementById('clickToStart');
+        if (window.mobileCheck()) {
+            const clickToStart = document.getElementById('clickToStart');
 
-        const chooseMarker = document.getElementById("chooseMarker");
-        const chooseLocation = document.getElementById("chooseLocation");
+            const chooseMarker = document.getElementById("chooseMarker");
+            const chooseLocation = document.getElementById("chooseLocation");
 
-        chooseMarker.addEventListener('click', () => {
-            document.getElementById("objects").remove();
-            showScreen("Marker");
-            clickToStart.remove();
-        });
+            chooseMarker.addEventListener('click', () => {
+                document.getElementById("objects").remove();
+                showScreen("Marker");
+                clickToStart.remove();
+            });
 
-        chooseLocation.addEventListener('click', () => {
-            document.getElementById("marker").remove();
-            showScreen("Location");
-            getLocation(showPosition);
-            clickToStart.remove();
-        });
+            chooseLocation.addEventListener('click', () => {
+                document.getElementById("marker").remove();
+                showScreen("Location");
+                getLocation(showPosition);
+                clickToStart.remove();
+            });
+        } else {
+            document.getElementById("arScene").remove();
+
+            document.getElementById("clickToStart").innerHTML = `
+                <img src="./img/qr-code.png" />
+            `;
+        }
     }
 });
-
-document.onload = () => {
-    if (!window.mobileCheck()) {
-        document.getElementById("arScene").remove();
-
-        document.getElementById("clickToStart").innerHTML = `
-            <img src="./img/qr-code.png" />
-        `;
-    }
-}

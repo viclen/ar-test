@@ -40,14 +40,14 @@
     </div>
 
     <script>
-        document.onload = () => {
-            if (!window.mobileCheck()) {
-                document.getElementById("clickToStart").innerHTML = `
+        document.onreadystatechange = () => {
+            if (document.readyState === "complete") {
+                if (!window.mobileCheck()) {
+                    document.getElementById("clickToStart").innerHTML = `
                 <img src="./img/qr-code.png" />
                 `;
-                document.getElementById("arScene").remove();
-                document.getElementsByTagName("video")[0].remove();
-                return;
+                    return;
+                }
             }
         }
     </script>

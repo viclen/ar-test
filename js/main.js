@@ -29,22 +29,24 @@ function openurl(url) {
     }
 }
 
+let lastItem;
+
 function showScreen(name) {
     const screen = document.getElementById('screen' + name);
     screen.setAttribute('visible', 'true');
 }
 
-AFRAME.registerComponent('ar-link', {
-    init: function () {
-        this.el.addEventListener('click', (event) => {
-            event.stopPropagation();
-            event.preventDefault();
-            console.log('click', this.el.id);
-            if (event.target.id === this.el.id)
-                openurl(this.el.getAttribute('href'));
-        });
-    }
-});
+// AFRAME.registerComponent('ar-link', {
+//     init: function () {
+//         this.el.addEventListener('click', (event) => {
+//             event.stopPropagation();
+//             event.preventDefault();
+//             console.log('click', this.el.id);
+//             if (event.target.id === this.el.id)
+//                 openurl(this.el.getAttribute('href'));
+//         });
+//     }
+// });
 
 AFRAME.registerComponent('ar-scene', {
     init: function () {
@@ -84,7 +86,10 @@ AFRAME.registerComponent('log-intersection', {
 
     init: function () {
         this.el.addEventListener('raycaster-intersection', () => {
-            console.log('Hit:', this.el);
+            if (this.el.getAttribute("class").includes('clickable')) {
+                lastItem = this.el;
+                console.log('Hit:', this.el.getAttribute("src"));
+            }
         });
     }
 });

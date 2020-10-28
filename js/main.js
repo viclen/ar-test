@@ -52,14 +52,14 @@ AFRAME.registerComponent('ar-link', {
 
 AFRAME.registerComponent('ar-scene', {
     init: function () {
-        if (!window.mobileCheck()) {
-            document.getElementById("arScene").remove();
+        // if (!window.mobileCheck()) {
+        //     document.getElementById("arScene").remove();
 
-            document.getElementById("clickToStart").innerHTML = `
-                <img src="./img/qr-code.png" />
-            `;
-            return;
-        }
+        //     document.getElementById("clickToStart").innerHTML = `
+        //         <img src="./img/qr-code.png" />
+        //     `;
+        //     return;
+        // }
 
         const clickToStart = document.getElementById('clickToStart');
 

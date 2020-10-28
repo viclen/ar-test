@@ -25,6 +25,7 @@ body {
     transform: translate(-50%, -50%);
     background-color: #ffffff85;
     padding: 20px;
+    z-index: 200;
 }
 
 .centered-modal .buttons {

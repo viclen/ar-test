@@ -55,13 +55,13 @@ AFRAME.registerComponent('ar-scene', {
 
         chooseMarker.addEventListener('click', () => {
             document.getElementById("objects").remove();
-            showScreen("Marker")
+            showScreen("Marker");
             clickToStart.remove();
         });
 
         chooseLocation.addEventListener('click', () => {
             document.getElementById("marker").remove();
-            showScreen("Location")
+            showScreen("Location");
             getLocation(showPosition);
             clickToStart.remove();
         });

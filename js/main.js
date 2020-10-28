@@ -48,9 +48,7 @@ AFRAME.registerComponent('ar-link', {
 
 AFRAME.registerComponent('ar-scene', {
     init: function () {
-        if (window.mobileCheck()) {
-            console.log("Not mobile");
-
+        // if (window.mobileCheck()) {
             const clickToStart = document.getElementById('clickToStart');
 
             const chooseMarker = document.getElementById("chooseMarker");
@@ -69,14 +67,12 @@ AFRAME.registerComponent('ar-scene', {
                 getLocation(showPosition);
                 clickToStart.remove();
             });
-        } else {
-            console.log("Not mobile");
+        // } else {
+        //     document.getElementById("arScene").remove();
 
-            document.getElementById("arScene").remove();
-
-            document.getElementById("clickToStart").innerHTML = `
-                <img src="./img/qr-code.png" />
-            `;
-        }
+        //     document.getElementById("clickToStart").innerHTML = `
+        //         <img src="./img/qr-code.png" />
+        //     `;
+        // }
     }
 });

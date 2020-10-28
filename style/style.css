@@ -19,6 +19,18 @@ body {
     text-align: center;
 }
 
+.fixed-front .text {
+    position: absolute;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+}
+
 .fixed-front img {
     max-width: 100%;
     max-height: 100%;

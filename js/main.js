@@ -62,7 +62,8 @@ AFRAME.registerComponent('ar-scene', {
 
             chooseLocation.addEventListener('click', () => {
                 document.getElementById("marker").remove();
-                document.getElementById("camera").setAttribute("rotation-reader", "true");
+                document.getElementById("camera").setAttribute("rotation-reader", "");
+                document.getElementById("camera").setAttribute("gps-camera", "");
                 showScreen("Location");
                 getLocation(showPosition);
                 clickToStart.remove();

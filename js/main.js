@@ -49,6 +49,8 @@ AFRAME.registerComponent('ar-link', {
 AFRAME.registerComponent('ar-scene', {
     init: function () {
         if (window.mobileCheck()) {
+            console.log("Not mobile");
+
             const clickToStart = document.getElementById('clickToStart');
 
             const chooseMarker = document.getElementById("chooseMarker");

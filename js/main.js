@@ -89,34 +89,14 @@ AFRAME.registerComponent('log-intersection', {
     dependencies: ['raycaster'],
 
     init: function () {
-        this.el.addEventListener('raycaster-intersection', () => {
+        this.el.addEventListener('raycaster-intersected', (event) => {
             if (this.el.getAttribute("class").includes('clickable')) {
                 lastItem = this.el;
+                console.log(event);
             } else {
                 lastItem = false;
             }
         });
-    }
-});
-
-AFRAME.registerComponent('listen-ray', {
-    init: function () {
-        // Use events to figure out what raycaster is listening so we don't have to
-        // hardcode the raycaster.
-        this.el.addEventListener('raycaster-intersected', evt => {
-            this.raycaster = evt.detail.el;
-        });
-        this.el.addEventListener('raycaster-intersected-cleared', evt => {
-            this.raycaster = null;
-        });
-    },
-
-    tick: function () {
-        if (!this.raycaster) { return; }  // Not intersecting.
-
-        let intersection = this.raycaster.components.raycaster.getIntersection(this.el);
-        if (!intersection) { return; }
-        console.log(intersection.point);
     }
 });
 

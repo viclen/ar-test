@@ -69,7 +69,7 @@ AFRAME.registerComponent('ar-scene', {
 });
 
 document.onload = () => {
-    if (window.mobileCheck()) {
+    if (!window.mobileCheck()) {
         document.getElementById("arScene").remove();
 
         document.getElementById("clickToStart").innerHTML = `

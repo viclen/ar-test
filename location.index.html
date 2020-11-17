@@ -110,6 +110,29 @@
 
         <a-light type="ambient" intensity="1" light=""></a-light>
     </a-scene>
+
+    <script>
+        document.addEventListener('click', function (event) {
+            if (window.started) {
+                const { height } = window.screen;
+                const y = event.clientY;
+                const items = document.getElementsByClassName("clickable");
+
+                const itemHeight = height / items.length;
+
+                for (let i = 0; i < items.length; i++) {
+                    if (y > i * itemHeight && y < i + 1 * itemHeight) {
+                        const element = items[items.length - 1 - i];
+                        if (element.getAttribute("href")) {
+                            element.addEventListener("click", function () {
+                                window.open(element.getAttribute("href"));
+                            });
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
